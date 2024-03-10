@@ -1,0 +1,57 @@
+{
+  "images": [
+    {
+      "id": "img7",
+      "src": "./img7.jpg",
+      "alt": "ISU Fit",
+      "title": "Join ISU Fit",
+      "description": "Join ISU Fit and vastly improve your workout regimen."
+    },
+    {
+      "id": "img8",
+      "src": "./img8.jpg",
+      "alt": "Positive Feedback",
+      "title": "See positive feedback from current ISU Fit members.",
+      "description": "View Testimonials"
+    }, {
+      "id": "img6",
+      "src": "./img6.jpg",
+      "alt": "ISU Fit",
+      "title": "Join ISU Fit",
+      "description": "Join ISU Fit and vastly improve your workout regimen."
+    },
+    {
+      "id": "img5",
+      "src": "./img5.jpg",
+      "alt": "Positive Feedback",
+      "title": "See positive feedback from current ISU Fit members.",
+      "description": "View Testimonials"
+    }, {
+      "id": "img4",
+      "src": "./img4.jpg",
+      "alt": "ISU Fit",
+      "title": "Join ISU Fit",
+      "description": "Join ISU Fit and vastly improve your workout regimen."
+    },
+    {
+      "id": "img3",
+      "src": "./img3.jpg",
+      "alt": "Positive Feedback",
+      "title": "See positive feedback from current ISU Fit members.",
+      "description": "View Testimonials"
+    }, {
+      "id": "img2",
+      "src": "./img2.jpg",
+      "alt": "ISU Fit",
+      "title": "Join ISU Fit",
+      "description": "Join ISU Fit and vastly improve your workout regimen."
+    },
+    {
+      "id": "img1",
+      "src": "./img1.jpg",
+      "alt": "Positive Feedback",
+      "title": "See positive feedback from current ISU Fit members.",
+      "description": "View Testimonials"
+    }
+  ]
+}
