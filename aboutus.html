@@ -3,39 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <link href="./bootstrap.min.css" rel="stylesheet">
+  <title>About Us · ISU Fit</title>
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="carousel.css" rel="stylesheet">
   <style>
     body {
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 3.5rem;
     }
+    .featurette-divider {
+      margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+    }
+    /* Personalize */
     .container {
       max-width: 960px;
     }
-    h2, p {
-      margin-bottom: 15px;
+    .team-member {
+      margin-bottom: 2rem;
+    }
+    .team-photo {
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .socials i {
+      padding: 0 10px;
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <h1 class="mb-4">About Us</h1>
-    <h2>Course Information</h2>
-    <p><strong>Course Name:</strong> Construction of User Interfaces</p>
-    <p><strong>Professor:</strong> Dr. Abraham Aldaco</p>
-    <p><strong>Email:</strong> aaldaco@iastate.edu</p>
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">ISU Fit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="workouts.html">Workouts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="WeightTracker.html">Weight Tracker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mealIdeas.html">Meal Ideas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="aboutus.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
 
-    <h2>Team Members</h2>
-    <ul>
-      <li>ahuric@email.com</li>
-      <li>dhuric@email.com</li>
-    </ul>
+<main role="main">
 
-    <h2>About Our Project</h2>
-    <p>This project is focused on creating an engaging and informative website showcasing a wide variety of cameras. Our aim is to help photography enthusiasts find the perfect camera that suits their needs and preferences, from beginners to professionals.</p>
+  <div class="container marketing">
+    <!-- START THE FEATURETTES -->
+    <div class="row featurette align-items-center">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">About ISU Fit. <span class="text-muted">Empowering ISU students.</span></h2>
+        <p class="lead">ISU Fit is a student-centric platform crafted to enhance the fitness journey of every Cyclone. Our mission is to provide effective workout plans, nutritious meal suggestions, and a comprehensive weight tracker to help students achieve their wellness goals while balancing academic life.</p>
+      </div>
+      <div class="col-md-5">
+        <div id="signup"></div>
+      </div>
+    </div>
 
-    <p>We have carefully selected and reviewed each camera to ensure our recommendations are reliable and up-to-date. Through this project, we hope to share our passion for photography and technology with others.</p>
+    <hr class="featurette-divider">
+
+   <!-- Team Members Section -->
+<div class="row featurette">
+  <div class="col-md-12 text-center">
+    <h2 class="featurette-heading">Meet the Team. <span class="text-muted">Our driving force.</span></h2>
   </div>
+</div>
+<div class="row justify-content-center">
+  <div class="col-lg-4 team-member text-center">
+    <h3>Adin Huric</h3>
+    <p>Lead Developer and Cyclone enthusiast, Adin brings a combination of tech savvy and fitness expertise to the team.</p>
+    <p><a class="btn btn-secondary" href="mailto:ahuric@iastate.edu">ahuric@iastate.edu</a></p>
+  </div><!-- /.col-lg-4 -->
+  <div class="col-lg-4 team-member text-center">
+    <h3>Dino Huric</h3>
+    <p>As a co-developer, Dino's innovative approach to design and functionality enhances user experience across the board.</p>
+    <p><a class="btn btn-secondary" href="mailto:dhuric@iastate.edu">dhuric@iastate.edu</a></p>
+  </div><!-- /.col-lg-4 -->
+</div>
+
+
+    <hr class="featurette-divider">
+
+    <!-- ADD MORE CONTENT HERE if necessary -->
+
+    <!-- /END THE FEATURETTES -->
+  </div><!-- /.container -->
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p>&copy; 2024 ISU Fit, Inc. </p>
+  </footer>
+</main>
+
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./index.js"></script>
+
 </body>
 </html>

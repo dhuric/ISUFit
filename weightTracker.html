@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+  <script src="../assets/js/color-modes.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weight Tracker · ISU Fit</title>
+  <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="carousel.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./index.js"></script>
+</head>
+
+
+
+<body>
+
+<header data-bs-theme="dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">ISU Fit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="workouts.html">Workouts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="WeightTracker.html">Weight Tracker</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mealIdeas.html">Meal Ideas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header>
+
+<main class="container mt-5 pt-5">
+  <h1 class="mt-5 pt-4">Weight Tracker</h1>
+  <!-- Weight Entry Form and Chart -->
+  <div class="mb-3">
+    <h4>Enter Your Daily Weight</h4>
+    <form id="weightEntryForm">
+      <div class="mb-3">
+        <label for="weightInput" class="form-label">Weight (Lbs)</label>
+        <input type="number" class="form-control" id="weightInput" placeholder="Enter your weight" step="0.1" required>
+      </div>
+      <div class="mb-3">
+        <label for="dateInput" class="form-label">Date</label>
+        <input type="date" class="form-control" id="dateInput" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-danger" id="clearData">Clear Data</button>
+    </form>
+  </div>
+  <h4>Your Weight Progress</h4>
+  <canvas id="weightChart"></canvas>
+
+  <hr class="featurette-divider">
+
+
+
+
+  <footer class="container">
+    <p>&copy; 2024 ISU Fit, Inc. </p>
+  </footer>
+  
+  <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./index.js"></script>
+</footer>
+
+<script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const storedWeights = JSON.parse(localStorage.getItem('weights')) || [];
+  const ctx = document.getElementById('weightChart').getContext('2d');
+  let weightChart;
+
+  document.getElementById('weightEntryForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const weight = document.getElementById('weightInput').value;
+    const date = document.getElementById('dateInput').value;
+
+    storedWeights.push({ date, weight });
+    localStorage.setItem('weights', JSON.stringify(storedWeights));
+    updateChart();
+  });
+
+  document.getElementById('clearData').addEventListener('click', function() {
+    localStorage.clear();
+    window.location.reload(); // Reload the page to reset everything
+  });
+
+  function updateChart() {
+    if (weightChart) {
+      weightChart.destroy(); // Destroy the old chart instance before creating a new one
+    }
+
+    storedWeights.sort((a, b) => new Date(a.date) - new Date(b.date));
+    const labels = storedWeights.map(entry => entry.date);
+    const data = storedWeights.map(entry => parseFloat(entry.weight));
+
+    weightChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Weight (Lbs)',
+          data: data,
+          fill: false,
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: false
+          }
+        }
+      }
+    });
+  }
+
+  updateChart();
+</script>
+<style>
+  /* Style for the div container that holds the image */
+  .informative-section .image-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+  }
+
+  /* Style for the images within the div */
+  .informative-section .image-container img {
+    max-width: 100%; /* Make sure the image is no wider than the container */
+    height: auto; /* Maintain the aspect ratio of the image */
+    max-height: 200px; /* Adjust this value to fit your design */
+  }
+</style>
+
+</body>
+</html>

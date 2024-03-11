@@ -96,7 +96,35 @@
       }
     </style>
 
-    
+<header data-bs-theme="dark">
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">ISU Fit</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="workouts.html">Workouts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="WeightTracker.html">Weight Tracker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mealIdeas.html">Meal Ideas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
     <!-- Custom styles for this template -->
     <link href="sign-in.css" rel="stylesheet">
   </head>
@@ -155,7 +183,8 @@
     
 <main class="form-signin w-100 m-auto">
   <form>
-    <img class="mb-4" src="./isu.png" alt="" width="72" height="57">
+    <div id="signup"></div>
+    <!-- <img class="mb-4" src="./isu.png" alt="" width="72" height="57"> -->
     <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
 
     <div class="form-floating">
@@ -174,10 +203,11 @@
       </label>
     </div>
     <button class="btn btn-primary w-100 py-2" type="submit">Sign up</button>
-    <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
+    <p class="mt-5 mb-3 text-body-secondary">&copy; 2024</p>
   </form>
 </main>
 <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./index.js"></script>
 
     </body>
 </html>

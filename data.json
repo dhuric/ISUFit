@@ -1,57 +1,80 @@
 {
   "images": [
     {
+      "id": "signup",
+      "src": "./images/isu.png"
+    },
+    {
       "id": "img7",
-      "src": "./img7.jpg",
-      "alt": "ISU Fit",
-      "title": "Join ISU Fit",
-      "description": "Join ISU Fit and vastly improve your workout regimen."
+      "src": "./images/img7.jpg"      
     },
     {
       "id": "img8",
-      "src": "./img8.jpg",
-      "alt": "Positive Feedback",
-      "title": "See positive feedback from current ISU Fit members.",
-      "description": "View Testimonials"
+      "src": "./images/img8.jpg"
+     
     }, {
       "id": "img6",
-      "src": "./img6.jpg",
-      "alt": "ISU Fit",
-      "title": "Join ISU Fit",
-      "description": "Join ISU Fit and vastly improve your workout regimen."
+      "src": "./images/img6.jpg"
+    
     },
     {
       "id": "img5",
-      "src": "./img5.jpg",
-      "alt": "Positive Feedback",
-      "title": "See positive feedback from current ISU Fit members.",
-      "description": "View Testimonials"
+      "src": "./images/img5.png"
     }, {
       "id": "img4",
-      "src": "./img4.jpg",
-      "alt": "ISU Fit",
-      "title": "Join ISU Fit",
-      "description": "Join ISU Fit and vastly improve your workout regimen."
+      "src": "./images/img4.jpg"
     },
     {
       "id": "img3",
-      "src": "./img3.jpg",
-      "alt": "Positive Feedback",
-      "title": "See positive feedback from current ISU Fit members.",
-      "description": "View Testimonials"
-    }, {
+      "src": "./images/img3.jpg"
+    }, 
+    {
       "id": "img2",
-      "src": "./img2.jpg",
-      "alt": "ISU Fit",
-      "title": "Join ISU Fit",
-      "description": "Join ISU Fit and vastly improve your workout regimen."
+      "src": "./images/img2.jpg"
     },
     {
       "id": "img1",
-      "src": "./img1.jpg",
-      "alt": "Positive Feedback",
-      "title": "See positive feedback from current ISU Fit members.",
-      "description": "View Testimonials"
+      "src": "./images/img1.jpg"
+    },
+    {
+      "id": "liedRec",
+      "src": "./images/liedRec.png"
+    },
+    {
+      "id": "stateGym",
+      "src": "./images/stateGym.png"
+    },
+    {
+      "id": "breakfast",
+      "src": "./images/breakfast.png"
+    },
+    {
+      "id": "lunch",
+      "src": "./images/lunch.png"
+    },
+    {
+      "id": "dinner",
+      "src": "./images/dinner.jpg"
+    },
+    {
+      "id": "bench",
+      "src": "./images/benchpress.jpg"
+    },
+    {
+      "id": "deadlift",
+      "src": "./images/deadlift.jpg"
+    },
+    {
+      "id": "squat",
+      "src": "./images/squat.jpg"
+    },
+    {
+      "id": "scale",
+      "src": "./images/scale.jpg"
+    },
+    {
+      "id": "calDef",
+      "src": "./images/calDef.jpg"
     }
   ]
 }
